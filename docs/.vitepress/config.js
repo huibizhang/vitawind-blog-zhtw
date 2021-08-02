@@ -9,7 +9,7 @@ module.exports = {
   markdown: {
     lineNumbers: true,
     // options for markdown-it-anchor
-    anchor: { permalink: false },
+    anchor: { permalink: true },
     // options for markdown-it-toc
     toc: { includeLevel: [1, 2] },
   },
