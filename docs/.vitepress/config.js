@@ -20,7 +20,7 @@ module.exports = {
       { text: '首頁', link: '/' },
       { text: '文件', link: '/guide/', activeMatch: '^/guide/' },
       { text: '快速搭建環境', link: '/scaffolding/', activeMatch: '^/scaffolding/' },
-      { text: `Change to English`, link: 'htts://vitawind-blog.vercel.app' },
+      { text: `Change to English`, link: 'https://vitawind-blog.vercel.app' },
       // {
       //   text: 'Config Reference',
       //   link: '/config/basics',
