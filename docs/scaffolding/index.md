@@ -12,7 +12,6 @@ sidebarDepth: 2
 
 <script setup>
 import CreateVitawind from '../.vitepress/components/CreateVitawind.vue'
-import Footer from '../.vitepress/components/Footer.vue'
 </script>
 
 <CreateVitawind />
@@ -23,13 +22,13 @@ import Footer from '../.vitepress/components/Footer.vue'
 ### 我該做些什麼？
 首先，在你要放置專案的資料夾中開啟 terminal，然後執行下列指令：
 
-```shell
+```bash
 npm init vitawind@latest {專案名稱} -- {範本}
 ```
 
 請基於這個指令，換成你的專案名稱以及你所要使用的範本，舉例：
 
-```shell
+```bash
 npm init vitawind@latest my-first-app -- --vue
 ```
 

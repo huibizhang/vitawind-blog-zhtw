@@ -16,11 +16,11 @@
 
 ### Vue in Vite 
 使用 `--vue` 參數來建立 vite 的 vue 專案。
-```shell
+```bash
 npm init vitawind@latest {專案名稱} -- --vue
 ```
 建立專案之後，你需要做：
-```shell
+```bash
 cd {專案名稱}
 npm install  # 或 `yarn`
 npm run dev  # 或 `yarn dev`
@@ -30,11 +30,11 @@ npm run dev  # 或 `yarn dev`
 
 ### React in Vite 
 使用 `--react` 參數來建立 vite 的 react 專案。
-```shell
+```bash
 npm init vitawind@latest {專案名稱} -- --react
 ```
 建立專案之後，你需要做：
-```shell
+```bash
 cd {專案名稱}
 npm install  # 或 `yarn`
 npm run dev  # 或 `yarn dev`
@@ -44,11 +44,11 @@ npm run dev  # 或 `yarn dev`
 
 ### Vue-CLI
 使用 `--vuecli` 參數來建立 Vue-CLI 專案。
-```shell
+```bash
 npm init vitawind@latest {專案名稱} -- --vuecli
 ```
 建立專案之後，你需要做：
-```shell
+```bash
 cd {專案名稱}
 npm install  # 或 `yarn`
 npm run serve  # 或 `yarn serve`
@@ -56,22 +56,22 @@ npm run serve  # 或 `yarn serve`
 
 ### Create React App 
 使用 `--cra` 參數來建立 Create React App 專案。
-```shell
+```bash
 npm init vitawind@latest {專案名稱} -- --cra
 ```
 建立專案之後，你需要做：
-```shell
+```bash
 cd {專案名稱}
 npm install  # 或 `yarn`
 npm run start  # 或 `yarn start`
 ```
 <!-- ### Create React App 
 Use flag `--cra` to create project with Create React App and ***Tailwind CSS version is 2.1.4***. For newest version of Tailwind, see ["Create React App + TailwindCSS 2.2"](#create-react-app-tailwindcss-2-2) section.
-```shell
+```bash
 npm init vitawind {專案名稱} --cra
 ```
 建立專案之後，你需要做：
-```shell
+```bash
 cd {專案名稱}
 npm install  # 或 `yarn`
 npm run start  # 或 `yarn start`
@@ -80,11 +80,11 @@ npm run start  # 或 `yarn start`
 <!-- ### Create React App + TailwindCSS 2.2
 Use flag `--cra22` to create project with Create React App and ***Tailwind CSS version is 2.2 or higher***.
 
-```shell
+```bash
 npm init vitawind {專案名稱} --cra22
 ```
 建立專案之後，你需要做：
-```shell
+```bash
 cd {專案名稱}
 npm install  # 或 `yarn`
 npm run start  # 或 `yarn start`
@@ -93,11 +93,11 @@ npm run start  # 或 `yarn start`
 ### Angular
 使用 `--ng` 參數來建立 Angular CLI 專案。
 
-```shell
+```bash
 npm init vitawind@latest {專案名稱} -- --ng
 ```
 建立專案之後，你需要做：
-```shell
+```bash
 cd {專案名稱}
 npm install  # 或 `yarn`
 npm run start  # 或 `yarn start`
