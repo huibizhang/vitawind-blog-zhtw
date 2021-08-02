@@ -12,7 +12,12 @@ sidebarDepth: 2
 
 <script setup>
 import CreateVitawind from '../.vitepress/components/CreateVitawind.vue'
+import Language from '../.vitepress/components/Language.vue'
+import { useData } from 'vitepress'
+const { theme } = useData()
 </script>
+
+<!-- <Language /> -->
 
 <CreateVitawind />
 
