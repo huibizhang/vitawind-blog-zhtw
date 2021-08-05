@@ -1,5 +1,5 @@
 ---
-title: Scaffolding
+title: 快速搭建環境
 head:
   - - meta
     - name: description
