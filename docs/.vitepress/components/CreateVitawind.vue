@@ -38,7 +38,7 @@ export default {
   name: "CreateVitawind",
   data() {
     return {
-      logoPath: "/vitawind_pack.svg",
+      logoPath: "/vitawind_pack.png",
       url: "/scaffolding/",
     };
   },
