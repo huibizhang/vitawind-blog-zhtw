@@ -1,3 +1,15 @@
+---
+title: 範本
+head:
+  - - meta
+    - name: description
+      content: 選擇一個範本，快速建立您的 Tailwind 專案，輕鬆又簡單。
+  - - meta
+    - name: keywords
+      content: create-vitawind vitawind vite vitejs vitejs-plugin tailwind tailwindcss hmr react create-react-app vuecli vue-cli ng angular
+sidebarDepth: 2
+---
+
 <script setup>
 import Badge from '../.vitepress/components/Badge.vue'
 </script>
