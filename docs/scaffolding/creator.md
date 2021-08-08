@@ -3,7 +3,7 @@ title: Creator
 head:
   - - meta
     - name: description
-      content: Create scaffolding installation commands for your tailwind project. Keep it easy, Keep it simple.
+      content: 極速生成範本所需的安裝指令，快速建立您的 Tailwind 專案，輕鬆又簡單。
   - - meta
     - name: keywords
       content: create-vitawind vitawind vite vitejs vitejs-plugin tailwind tailwindcss hmr react create-react-app vuecli vue-cli ng angular
