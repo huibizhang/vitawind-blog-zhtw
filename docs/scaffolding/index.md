@@ -38,4 +38,4 @@ npm init vitawind@latest my-first-app -- --vue
 ```
 
 ### 有哪些範本呢？
-來去[看看所有的範本](./templates)。
+來去[看看所有的範本](./templates)。 或者，你可以使用 [Creator 工具](./creator)來快速開始你的奇幻之旅。

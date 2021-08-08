@@ -120,7 +120,13 @@ function getScaffoldingSidebar() {
           ]
         }
       ]
-    }
+    },
+    {
+      text: '工具',
+      children: [
+        { text: 'Creator', link: '/scaffolding/creator' },
+      ]
+    },
   ]
 }
 
