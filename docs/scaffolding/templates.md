@@ -7,11 +7,50 @@ head:
   - - meta
     - name: keywords
       content: create-vitawind vitawind vite vitejs vitejs-plugin tailwind tailwindcss hmr react create-react-app vuecli vue-cli ng angular
-sidebarDepth: 2
+sidebarDepth: 3
 ---
 
-<script setup>
+<script>
 import Badge from '../.vitepress/components/Badge.vue'
+import ToolToggle from '../.vitepress/components/ToolToggle.vue'
+
+export default{
+  data () {
+    return {
+      tool: 'npm',
+      npm: true,
+      yarn: false,
+      storage: undefined
+    }
+  },
+  mounted () {
+    let tool = ''
+    if (typeof window !== 'undefined') {
+      if(window.localStorage.length>0) {
+        tool = window.localStorage.getItem('tool')
+      }
+    }
+    this.tool = tool?tool:'npm';
+    this.ct(this.tool)
+  },
+  methods:{
+    ct (event) {
+      const status = (event==='npm')
+      this.tool = event
+      this.npm = status
+      this.yarn = !status
+      if (typeof window !== 'undefined') {
+        window.localStorage.setItem('tool',event)
+      }
+      // if (this.storage = !) {
+      //   this.storage.setItem('tool',event)
+      // }
+    }
+  },
+  components: {
+    Badge,ToolToggle
+  }
+}
 </script>
 
 # 範本
@@ -36,11 +75,23 @@ import Badge from '../.vitepress/components/Badge.vue'
 npm init vitawind@latest {專案名稱} -- --vue
 ```
 建立專案之後，你需要做：
+
+<ToolToggle :name="'tool-vue'" :tool="tool" @tool="ct($event)"><div v-if="npm">
+
 ```bash
-cd {專案名稱}
-npm install  # 或 `yarn`
-npm run dev  # 或 `yarn dev`
+cd {project-name}
+npm install
+npm run dev
 ```
+</div><div v-if="yarn">
+
+```bash
+cd {project-name}
+yarn
+yarn dev
+```
+</div></ToolToggle>
+
 #### Typescript for Vue 
 若要建立加入 **typescript** 的 vite vue 專案，請使用  `--vue-ts` 參數。
 
@@ -51,11 +102,23 @@ npm run dev  # 或 `yarn dev`
 npm init vitawind@latest {專案名稱} -- --react
 ```
 建立專案之後，你需要做：
+
+<ToolToggle :name="'tool-react'" :tool="tool" @tool="ct($event)"><div v-if="npm">
+
 ```bash
-cd {專案名稱}
-npm install  # 或 `yarn`
-npm run dev  # 或 `yarn dev`
+cd {project-name}
+npm install
+npm run dev
 ```
+</div><div v-if="yarn">
+
+```bash
+cd {project-name}
+yarn
+yarn dev
+```
+</div></ToolToggle>
+
 #### Typescript for React 
 若要建立加入 **typescript** 的 vite react 專案，請使用  `--react-ts` 參數。
 
@@ -66,12 +129,23 @@ npm run dev  # 或 `yarn dev`
 npm init vitawind@latest {專案名稱} -- --vuecli
 ```
 建立專案之後，你需要做：
+
+<ToolToggle :name="'tool-vuecli'" :tool="tool" @tool="ct($event)"><div v-if="npm">
+
 ```bash
-cd {專案名稱}
-npm install -g tailwindcss-cli   # 或 `yarn global add tailwindcss-cli`
-npm install    # 或 `yarn`
-npm run serve  # 或 `yarn serve`
+cd {project-name}
+npm install
+npm run serve
 ```
+</div><div v-if="yarn">
+
+```bash
+cd {project-name}
+yarn
+yarn serve
+```
+</div></ToolToggle>
+
 #### Vue-CLI 5 <Badge color="green" text="BETA" />
 **Vue-CLI 5 是基於 postcss 8 來建置 CSS**，比 Vue-CLI 4 更適合用來進行 Tailwind CSS 的相關開發。 若要建立 **Vue-CLI 5** 的專案，請使用  `--vuecli5` 參數。
 
@@ -82,11 +156,23 @@ npm run serve  # 或 `yarn serve`
 npm init vitawind@latest {專案名稱} -- --cra
 ```
 建立專案之後，你需要做：
+
+<ToolToggle :name="'tool-cra'" :tool="tool" @tool="ct($event)"><div v-if="npm">
+
 ```bash
-cd {專案名稱}
-npm install    # 或 `yarn`
-npm run start  # 或 `yarn start`
+cd {project-name}
+npm install
+npm start
 ```
+</div><div v-if="yarn">
+
+```bash
+cd {project-name}
+yarn
+yarn start
+```
+</div></ToolToggle>
+
 <!-- ### Create React App 
 Use flag `--cra` to create project with Create React App and ***Tailwind CSS version is 2.1.4***. For newest version of Tailwind, see ["Create React App + TailwindCSS 2.2"](#create-react-app-tailwindcss-2-2) section.
 ```bash
@@ -119,8 +205,19 @@ npm run start  # 或 `yarn start`
 npm init vitawind@latest {專案名稱} -- --ng
 ```
 建立專案之後，你需要做：
+
+<ToolToggle :name="'tool-ng'" :tool="tool" @tool="ct($event)"><div v-if="npm">
+
 ```bash
-cd {專案名稱}
-npm install    # 或 `yarn`
-npm run start  # 或 `yarn start`
+cd {project-name}
+npm install
+npm start
 ```
+</div><div v-if="yarn">
+
+```bash
+cd {project-name}
+yarn
+yarn start
+```
+</div></ToolToggle>
