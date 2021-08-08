@@ -1,7 +1,7 @@
 <template>
   <div id="hp">
     <img id="logo" :src="logoPath" />
-    <h1 style="font-size:40px;" class="bg-pink-700">Vitawind</h1>
+    <h1 style="font-size:40px;">Vitawind</h1>
     <span style="font-size:20px;color:#AAAAAA;display:block;margin:5px 0 10px 0;">快如疾風，迅如閃電。</span>
     <p align="center">
       <span style="display:flex;gap:5px;">
