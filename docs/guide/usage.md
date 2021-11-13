@@ -17,7 +17,7 @@ $ yarn add vitawind
 ```bash
 $ npx vitawind
 ```
-執行 `npx vitaiwnd`，vitawind 就會自動設定並產生你所需要的相關配置檔，但是如果你想要使用完整版的 `tailwind.config.js` 或是你想要用自己的設定來建立配置檔的話，你可以[用參數來配置 vitaiwnd](#configuring-with-arguments)。
+執行 `npx vitawind`，vitawind 就會自動設定並產生你所需要的相關配置檔，但是如果你想要使用完整版的 `tailwind.config.js` 或是你想要用自己的設定來建立配置檔的話，你可以[用參數來配置 vitawind](#configuring-with-arguments)。
 
 ## 使用方法
 最後一個步驟，我們需要增加一行引用 css 檔的設定：
