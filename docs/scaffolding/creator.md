@@ -21,13 +21,15 @@ export default{
     return {
       projectName: 'test-project',
       tool: 'npm',
-      npm: true,
-      yarn: false,
       storage: undefined,
       modalOpen: false,
       msgShow: false,
-      template: 'vue',
+      template: '',
       templates:{
+        'pure':{
+          name: 'Vite Vanilla-JS',
+          script: ['run','dev'],
+        },
         'vue':{
           name: 'Vite Vue',
           script: ['run','dev'],
@@ -75,16 +77,10 @@ export default{
   },
   methods:{
     ct (event) {
-      const status = (event==='npm')
-      this.tool = event
-      this.npm = status
-      this.yarn = !status
       if (typeof window !== 'undefined') {
         window.localStorage.setItem('tool',event)
       }
-      // if (this.storage = !) {
-      //   this.storage.setItem('tool',event)
-      // }
+      this.tool = event
     },
     copy () {
       const copied = document.getElementById(`code-${this.tool}`).innerText
@@ -96,10 +92,14 @@ export default{
       this.msgShow = false
     },
     getScript() {
-      if (this.tool==='npm') {
-        return this.templates[this.template].script.join(' ')
+      const template = this.templates[this.template]
+
+      if (!template) { return '' }
+
+      if (this.tool==='npm' || this.tool==='pnpm') {
+        return template.script.join(' ')
       } else {
-        return this.templates[this.template].script[1]
+        return template.script[1]
       }
     }
   },
@@ -110,31 +110,43 @@ export default{
 </script>
 
 
-# Creator <Badge :color="'green'" :text="'測試版'" />
+# Creator <Badge :color="'green'" :text="'1.0'" />
 
 只要填上專案名稱並選擇一個範本，就可以極速生成你建置專案所需要的指令。
 
 試試看吧！ :tada:
 
 <Terminal :name="'terminal'" :tool="tool" :template="template" @tool="ct($event)" @copy="copy" @typing="projectName=$event" @choosing="modalOpen=true">
-<div v-if="npm"><pre id="code-npm" class="">
-npm init vitawind@latest {{projectName}} -- --{{template}}
+
+<div v-if="tool === 'npm'"><pre id="code-npm">
+npm init vitawind@latest {{projectName}} -- --{{template?template:'{template}'}}
 cd {{projectName}}
 npm install
-npm {{getScript().trim()}}
-</pre></div><div v-if="yarn"><pre id="code-yarn">
-npm init vitawind@latest {{projectName}} -- --{{template}}
+npm {{getScript()?getScript().trim():'{script}'}}
+</pre></div>
+
+<div v-if="tool === 'yarn'"><pre id="code-yarn">
+yarn create vitawind {{projectName}} --{{template?template:'{template}'}}
 cd {{projectName}}
 yarn
-yarn {{getScript().trim()}}
+yarn {{getScript()?getScript().trim():'{script}'}}
 </pre></div>
+
+<div v-if="tool === 'pnpm'"><pre id="code-pnpm">
+pnpm init vitawind@latest {{projectName}} -- --{{template?template:'{template}'}}
+cd {{projectName}}
+pnpm install
+pnpm {{getScript()?getScript().trim():'{script}'}}
+</pre></div>
+
 </Terminal>
+
 <div
   class="text-sm text-gray-500 text-center mt-4 transition-all"
   :class="{'scale-100':msgShow,'scale-0':!msgShow}"
 >
   <span class="bg-gray-200 p-1 rounded-md">
-    已複製到剪貼簿
+    已複製到剪貼簿。
   </span>
 </div>
 
