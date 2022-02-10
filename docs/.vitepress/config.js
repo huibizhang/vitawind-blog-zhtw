@@ -23,6 +23,13 @@ module.exports = {
         link: "/scaffolding/",
         activeMatch: "^/scaffolding/",
       },
+      {
+        text: "版本",
+        items: [
+          { text: "v2.x", link: "https://vitawind.vercel.app/zh/" },
+          { text: "v1", link: "#" },
+        ],
+      },
       { text: `Change to English`, link: "https://v1-vitawind.vercel.app" },
       // {
       //   text: 'Config Reference',
