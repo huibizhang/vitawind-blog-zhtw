@@ -54,26 +54,31 @@ export default{
 <CreateVitawind />
 
 ### 輕鬆又簡單
+
 就算是「安裝 Tailwind 並設定 jit 模式」也不能成為停下你開發腳步的阻礙！ 現在，你可以只用一行指令來建立「預先建構好 Tailwind jit 模式」的專案，快試試看吧！
 
 ### 我該做些什麼？
+
 首先，在你要放置專案的資料夾中開啟 terminal，然後執行下列指令：
 
 <ToolToggle :name="'tool-example-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
-npm init vitawind@latest {專案名稱} -- {範本}
+npm init vitawind {專案名稱} -- {範本}
 ```
+
 </div><div v-if="tool === 'yarn'">
 
 ```bash
 yarn create vitawind {專案名稱} {範本}
 ```
+
 </div><div v-if="tool === 'pnpm'">
 
 ```bash
-pnpm init vitawind@latest {專案名稱} -- {範本}
+pnpm init vitawind {專案名稱} -- {範本}
 ```
+
 </div></ToolToggle>
 
 請基於這個指令，換成你的專案名稱以及你所要使用的範本，舉例：
@@ -81,19 +86,23 @@ pnpm init vitawind@latest {專案名稱} -- {範本}
 <ToolToggle :name="'tool-vue-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
-npm init vitawind@latest my-first-app -- --vue
+npm init vitawind my-first-app -- --vue
 ```
+
 </div><div v-if="tool === 'yarn'">
 
 ```bash
 yarn create vitawind my-first-app --vue
 ```
+
 </div><div v-if="tool === 'pnpm'">
 
 ```bash
-pnpm init vitawind@latest my-first-app -- --vue
+pnpm init vitawind my-first-app -- --vue
 ```
+
 </div></ToolToggle>
 
 ### 有哪些範本呢？
+
 來去[看看所有的範本](./templates)。 或者，你可以使用 [Creator 工具](./creator)來快速開始你的奇幻之旅。

@@ -4,13 +4,16 @@ slug: configurations
 ---
 
 ## 取得完整的 Tailwind 配置檔
+
 如果你想要取得包含 Tailwind 全部預設配置的完整檔，請使用 `-f` 或是 `--full` 參數：
+
 ```bash
 npx vitaiwind -f
 # 或 `npx vitawind --full`
 ```
 
 ## 自訂路徑或檔名
+
 Tailwind 編譯 css 時會需要設定輸出的 css 檔。 在預設情況下，vitawind 會將它自動命名為：
 
 - `./src/index.css`
@@ -28,9 +31,11 @@ npx vitaiwind -o {output.css}
 <br>
 
 ## 使用 `--output` 參數後
-不同於[使用方法](#using)的段落，我們必須新增一行 css 檔的引用，**因為這個輸出後的 css 檔在上一個段落已經用 `-o` 參數將檔案名稱改為你所自訂的輸出檔名** :
+
+不同於[使用方法](./usage#使用方法)的段落，我們必須新增一行 css 檔的引用，**因為這個輸出後的 css 檔在上一個段落已經用 `-o` 參數將檔案名稱改為你所自訂的輸出檔名** :
 
 ### Vue
+
 ```js{4}
 // ./src/main.js
 import { createApp } from 'vue'
@@ -42,6 +47,7 @@ createApp(App).mount('#app')
 ```
 
 ### for React
+
 ```jsx{6}
 // ./src/main.jsx
 import React from 'react'

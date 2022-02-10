@@ -1,21 +1,22 @@
 <template>
   <div class="footer">
-    MIT Licensed | Copyright © 2021-present huibizhang Rabbit
+    MIT Licensed | Copyright © {{ new Date().getFullYear() }}-present huibizhang
+    Rabbit
   </div>
 </template>
 
 <script>
 export default {
-  name: "Footer"
-}
+  name: "Footer",
+};
 </script>
 
 <style>
-  .footer {
-    margin-top: 4rem;
-    padding: 20px;
-    border-top: 1px solid #E0E0E0;
-    text-align: center;
-    color: #A0A0A0;
-  }
+.footer {
+  margin-top: 4rem;
+  padding: 20px;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+  color: #a0a0a0;
+}
 </style>
