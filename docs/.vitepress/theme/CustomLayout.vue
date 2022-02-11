@@ -9,7 +9,7 @@ const { Layout } = DefaultTheme;
       class="flex-none flex h-8 justify-center bg-gradient-to-r from-green-500 to-blue-400 text-white items-center fixed w-screen z-50"
     >
       你正在看的是 v1 文件。若要查看最新內容，請前往&nbsp;
-      <a href="https://vitawind.vercel.app" class="text-white underline"
+      <a href="https://vitawind.vercel.app/zh/" class="text-white underline"
         >v2.x 文件</a
       >.
     </div>
